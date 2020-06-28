@@ -10,41 +10,70 @@ import UIKit
 
 final class AppDetailViewController: UIViewController {
     
-    public var app: ITunesApp?
+    let app: ITunesApp
     
-    private let imageDownloader = ImageDownloader()
+    lazy var headerViewController = AppDetailHeaderViewController(app: self.app)
     
-    private var appDetailView: AppDetailView {
-        return self.view as! AppDetailView
+    init(app: ITunesApp) {
+        self.app = app
+        
+        super.init(nibName: nil, bundle: nil)
     }
     
-    // MARK: - Lifecycle
-    
-    override func loadView() {
-        super.loadView()
-        self.view = AppDetailView()
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.configureNavigationController()
-        self.downloadImage()
+
+        self.configureUI()
     }
+}
+
+private extension AppDetailViewController {
     
-    // MARK: - Private
-    
-    private func configureNavigationController() {
-        self.navigationController?.navigationBar.tintColor = UIColor.white;
+    func configureUI() {
+        self.view.backgroundColor = .white
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationItem.largeTitleDisplayMode = .never
+        self.addHeaderViewController()
+        self.addDescriptionViewController()
     }
     
-    private func downloadImage() {
-        guard let url = self.app?.iconUrl else { return }
-        self.appDetailView.throbber.startAnimating()
-        self.imageDownloader.getImage(fromUrl: url) { (image, error) in
-            self.appDetailView.throbber.stopAnimating()
-            guard let image = image else { return }
-            self.appDetailView.imageView.image = image
-        }
+    func addHeaderViewController() {
+        
+        guard let headerView = self.headerViewController.view else { return }
+        
+        self.addChild(self.headerViewController)
+        self.view.addSubview(headerView)
+        self.headerViewController.didMove(toParent: self)
+        
+        headerView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            headerView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            headerView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            headerView.rightAnchor.constraint(equalTo: self.view.rightAnchor)
+        ])
+    }
+    
+    func addDescriptionViewController() {
+        
+        let descriptionViewController = UIViewController()
+        guard let descriptionView = descriptionViewController.view else { return }
+        
+        self.addChild(descriptionViewController)
+        self.view.addSubview(descriptionView)
+        descriptionViewController.didMove(toParent: self)
+        
+        descriptionView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            descriptionView.topAnchor.constraint(equalTo: self.headerViewController.view.bottomAnchor),
+            descriptionView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
+            descriptionView.rightAnchor.constraint(equalTo: self.view.rightAnchor),
+            descriptionView.heightAnchor.constraint(equalToConstant: 250.0)
+        ])
     }
 }
