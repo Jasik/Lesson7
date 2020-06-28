@@ -22,7 +22,7 @@ final class AppDetailHeaderView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
-        label.font = UIFont.boldSystemFont(ofSize: 20.0)
+        label.font = .boldSystemFont(ofSize: 20.0)
         label.numberOfLines = 2
         return label
     }()
@@ -31,7 +31,7 @@ final class AppDetailHeaderView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .lightGray
-        label.font = UIFont.systemFont(ofSize: 14.0)
+        label.font = .systemFont(ofSize: 14.0)
         return label
     }()
     
@@ -48,7 +48,7 @@ final class AppDetailHeaderView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .lightGray
-        label.font = UIFont.boldSystemFont(ofSize: 20.0)
+        label.font = .boldSystemFont(ofSize: 20.0)
         return label
     }()
     
@@ -69,11 +69,11 @@ private extension AppDetailHeaderView {
     
     func setupLayout() {
         
-        self.addSubview(self.imageView)
-        self.addSubview(self.titleLabel)
-        self.addSubview(self.subTitleLabel)
-        self.addSubview(self.openButton)
-        self.addSubview(self.ratingLabel)
+        self.addSubview(imageView)
+        self.addSubview(titleLabel)
+        self.addSubview(subTitleLabel)
+        self.addSubview(openButton)
+        self.addSubview(ratingLabel)
         
         NSLayoutConstraint.activate([
             self.imageView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 12.0),

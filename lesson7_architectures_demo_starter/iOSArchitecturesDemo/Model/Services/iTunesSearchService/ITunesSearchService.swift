@@ -39,16 +39,21 @@ final class ITunesSearchService {
         
         let request = WebRequest(method: .get, url: baseUrl, parameters: parameters)
         
+        networkManager.test(request)
+        
         networkManager.dataRequest(request) { [weak self] result in
             guard let self = self else {
                 completion?(.success([]))
                 return
             }
+            
             result
                 .withValue { data in
                     do {
                         let result = try self.decoder.decode(ITunesSearchResult<ITunesApp>.self, from: data)
                         let apps = result.results
+//                        print("apps   :   \(apps)")
+//                        print("result :   \(result)")
                         completion?(.success(apps))
                     } catch {
                         print(error)
@@ -79,7 +84,9 @@ final class ITunesSearchService {
                 .withValue { data in
                     do {
                         let result = try self.decoder.decode(ITunesSearchResult<ITunesSong>.self, from: data)
+                        print(result)
                         let apps = result.results
+                        print("app    :   \(apps)")
                         completion?(.success(apps))
                     } catch {
                         print(error)

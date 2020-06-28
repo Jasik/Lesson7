@@ -22,6 +22,9 @@ public struct ITunesApp: Codable {
     public let size: Bytes?
     public let iconUrl: String?
     public let screenshotUrls: [String]
+    public let appVersion: String
+    public let appCurrentVersionReleaseDate: String?
+    public let appReleaseNotes: String?
     
     // MARK: - Codable
     
@@ -36,6 +39,9 @@ public struct ITunesApp: Codable {
         case size = "fileSizeBytes"
         case iconUrl = "artworkUrl512"
         case screenshotUrls = "screenshotUrls"
+        case appVersion = "version"
+        case appCurrentVersionReleaseDate = "currentVersionReleaseDate"
+        case appReleaseNotes = "releaseNotes"
     }
     
     public init(from decoder: Decoder) throws {
@@ -50,6 +56,9 @@ public struct ITunesApp: Codable {
         self.size = (try? container.decode(String.self, forKey: .size)) >>- { Bytes($0) }
         self.iconUrl = try? container.decode(String.self, forKey: .iconUrl)
         self.screenshotUrls = (try? container.decode([String].self, forKey: .screenshotUrls)) ?? []
+        self.appVersion = (try container.decode(String.self, forKey: .appVersion))
+        self.appCurrentVersionReleaseDate = (try? container.decode(String.self, forKey: .appCurrentVersionReleaseDate))
+        self.appReleaseNotes = (try? container.decode(String.self, forKey: .appReleaseNotes))
     }
     
     // MARK: - Init
@@ -63,7 +72,10 @@ public struct ITunesApp: Codable {
                   averageRatingForCurrentVersion: Float?,
                   size: Bytes?,
                   iconUrl: String?,
-                  screenshotUrls: [String]) {
+                  screenshotUrls: [String],
+                  appVersion: String,
+                  appCurrentVersionReleaseDate: String?,
+                  appReleaseNotes: String?) {
         self.appName = appName
         self.appUrl = appUrl
         self.company = company
@@ -74,5 +86,8 @@ public struct ITunesApp: Codable {
         self.size = size
         self.iconUrl = iconUrl
         self.screenshotUrls = screenshotUrls
+        self.appVersion = appVersion
+        self.appCurrentVersionReleaseDate = appCurrentVersionReleaseDate
+        self.appReleaseNotes = appReleaseNotes
     }
 }
