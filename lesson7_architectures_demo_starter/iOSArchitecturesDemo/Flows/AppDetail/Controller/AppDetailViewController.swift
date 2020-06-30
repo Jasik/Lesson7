@@ -13,6 +13,7 @@ final class AppDetailViewController: UIViewController {
     let app: ITunesApp
     
     lazy var headerViewController = AppDetailHeaderViewController(app: self.app)
+    lazy var versionViewController = AppDetailVersionViewController(app: self.app)
     
     init(app: ITunesApp) {
         self.app = app
@@ -38,7 +39,8 @@ private extension AppDetailViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationItem.largeTitleDisplayMode = .never
         self.addHeaderViewController()
-        self.addDescriptionViewController()
+        self.addVersionViewController()
+//        self.addDescriptionViewController()
     }
     
     func addHeaderViewController() {
@@ -58,22 +60,40 @@ private extension AppDetailViewController {
         ])
     }
     
-    func addDescriptionViewController() {
+    func addVersionViewController() {
         
-        let descriptionViewController = UIViewController()
-        guard let descriptionView = descriptionViewController.view else { return }
+        guard let versionView  = self.versionViewController.view else { return }
         
-        self.addChild(descriptionViewController)
-        self.view.addSubview(descriptionView)
-        descriptionViewController.didMove(toParent: self)
+        self.addChild(self.versionViewController)
+        self.view.addSubview(versionView)
+        self.versionViewController.didMove(toParent: self)
         
-        descriptionView.translatesAutoresizingMaskIntoConstraints = false
+        versionView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            descriptionView.topAnchor.constraint(equalTo: self.headerViewController.view.bottomAnchor),
-            descriptionView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
-            descriptionView.rightAnchor.constraint(equalTo: self.view.rightAnchor),
-            descriptionView.heightAnchor.constraint(equalToConstant: 250.0)
+            versionView.topAnchor.constraint(equalTo: self.headerViewController.view.bottomAnchor),
+            versionView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
+            versionView.rightAnchor.constraint(equalTo: self.view.rightAnchor),
+            versionView.heightAnchor.constraint(equalToConstant: 250.0)
         ])
     }
+    
+//    func addDescriptionViewController() {
+//
+//        let descriptionViewController = UIViewController()
+//        guard let descriptionView = descriptionViewController.view else { return }
+//
+//        self.addChild(descriptionViewController)
+//        self.view.addSubview(descriptionView)
+//        descriptionViewController.didMove(toParent: self)
+//
+//        descriptionView.translatesAutoresizingMaskIntoConstraints = false
+//
+//        NSLayoutConstraint.activate([
+//            descriptionView.topAnchor.constraint(equalTo: self.headerViewController.view.bottomAnchor),
+//            descriptionView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
+//            descriptionView.rightAnchor.constraint(equalTo: self.view.rightAnchor),
+//            descriptionView.heightAnchor.constraint(equalToConstant: 250.0)
+//        ])
+//    }
 }

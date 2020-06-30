@@ -27,6 +27,12 @@ final class NetworkManager {
         }
     }
     
+    public func test(_ request: WebRequest) {
+        Alamofire.request(request.url, method: request.method, parameters: request.parameters).responseString { response in
+            print("response     :     \(response)")
+        }
+    }
+    
     public func jsonRequest(_ request: WebRequest, then completion: JSONCompletion?) {
         Alamofire.request(request.url, method: request.method, parameters: request.parameters).validate().responseJSON { [weak self] response in
             response.result
