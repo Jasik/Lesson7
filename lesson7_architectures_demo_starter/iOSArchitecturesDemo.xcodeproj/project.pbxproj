@@ -19,6 +19,8 @@
 		9FE0639C24A8C54700437D99 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE0639B24A8C54700437D99 /* SongCell.swift */; };
 		9FE0639E24AA275C00437D99 /* SongSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE0639D24AA275C00437D99 /* SongSearchPresenter.swift */; };
 		9FE063A124AB640C00437D99 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE063A024AB640C00437D99 /* Observable.swift */; };
+		9FE063AC24B5E79500437D99 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE063AB24B5E79500437D99 /* SearchRouter.swift */; };
+		9FE063AE24B5E95C00437D99 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE063AD24B5E95C00437D99 /* SearchInteractor.swift */; };
 		E0E1D2932034A3350011E01A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E1D2922034A3350011E01A /* AppDelegate.swift */; };
 		E0E1D2952034A3350011E01A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E1D2942034A3350011E01A /* SearchViewController.swift */; };
 		E0E1D29A2034A3350011E01A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0E1D2992034A3350011E01A /* Assets.xcassets */; };
@@ -54,6 +56,8 @@
 		9FE0639B24A8C54700437D99 /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
 		9FE0639D24AA275C00437D99 /* SongSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongSearchPresenter.swift; sourceTree = "<group>"; };
 		9FE063A024AB640C00437D99 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		9FE063AB24B5E79500437D99 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		9FE063AD24B5E95C00437D99 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
 		A067E149D296BC0C249FD11F /* Pods-iOSArchitecturesDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSArchitecturesDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSArchitecturesDemo/Pods-iOSArchitecturesDemo.release.xcconfig"; sourceTree = "<group>"; };
 		E0E1D28F2034A3350011E01A /* iOSArchitecturesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSArchitecturesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0E1D2922034A3350011E01A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +128,15 @@
 			path = Observable;
 			sourceTree = "<group>";
 		};
+		9FE063AA24B5E75900437D99 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9FE063AB24B5E79500437D99 /* SearchRouter.swift */,
+				9FE063AD24B5E95C00437D99 /* SearchInteractor.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		DB95456C2F2DCD400ABCE8E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +186,7 @@
 		E0E1D2A62034A36C0011E01A /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				9FE063AA24B5E75900437D99 /* Router */,
 				9F6933E224A837F7007DFDAF /* Builder */,
 				9F6933DF24A82ED3007DFDAF /* Presenter */,
 				F8A97B3622498F0C00FB2C0E /* View */,
@@ -466,6 +480,7 @@
 				E0E1D3D1203C48D70011E01A /* AppDetailViewController.swift in Sources */,
 				E0E1D358203ADC590011E01A /* NetworkManager.swift in Sources */,
 				E0E1D39C203AE6420011E01A /* ITunesSong.swift in Sources */,
+				9FE063AC24B5E79500437D99 /* SearchRouter.swift in Sources */,
 				9FE0639C24A8C54700437D99 /* SongCell.swift in Sources */,
 				9F6933E824A84FD1007DFDAF /* AppDetailVersionViewController.swift in Sources */,
 				9FE0639A24A8C39D00437D99 /* SongCellModel.swift in Sources */,
@@ -475,6 +490,7 @@
 				F8114FBE22A3DBF400102830 /* SearchView.swift in Sources */,
 				9F6933E624A84330007DFDAF /* AppDetailVersionView.swift in Sources */,
 				E0E1D395203AE5E20011E01A /* ITunesSearchResult.swift in Sources */,
+				9FE063AE24B5E95C00437D99 /* SearchInteractor.swift in Sources */,
 				E0E1D392203AE58B0011E01A /* ITunesSearchService.swift in Sources */,
 				9FE063A124AB640C00437D99 /* Observable.swift in Sources */,
 				E0E1D2932034A3350011E01A /* AppDelegate.swift in Sources */,
