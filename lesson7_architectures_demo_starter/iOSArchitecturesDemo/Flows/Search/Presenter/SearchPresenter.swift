@@ -11,7 +11,7 @@ import UIKit
 
 protocol SearchViewInput: class {
     var searchResults: [ITunesApp] { get set }
-    
+
     func showError(error: Error)
     func showNoResults()
     func hideNoResults()
@@ -28,6 +28,14 @@ final class SearchPresenter {
     weak var viewInput: (UIViewController & SearchViewInput)?
     
     private let searchService = ITunesSearchService()
+    
+    let interactor: SearchInteractorInput
+    let router: SearchRouterInput
+    
+    init(interactor: SearchInteractorInput, router: SearchRouterInput) {
+        self.interactor = interactor
+        self.router = router
+    }
     
 }
 
@@ -68,6 +76,6 @@ extension SearchPresenter: SearchViewOutput {
     }
     
     func viewDidSelectApp(_ app: ITunesApp) {
-        self.openAppDetails(with: app)
+        self.router.openDetails(for: app)
     }
 }
