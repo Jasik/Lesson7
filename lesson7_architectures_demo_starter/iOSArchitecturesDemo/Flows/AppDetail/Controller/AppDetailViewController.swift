@@ -40,7 +40,6 @@ private extension AppDetailViewController {
         self.navigationItem.largeTitleDisplayMode = .never
         self.addHeaderViewController()
         self.addVersionViewController()
-//        self.addDescriptionViewController()
     }
     
     func addHeaderViewController() {
@@ -77,23 +76,4 @@ private extension AppDetailViewController {
             versionView.heightAnchor.constraint(equalToConstant: 250.0)
         ])
     }
-    
-//    func addDescriptionViewController() {
-//
-//        let descriptionViewController = UIViewController()
-//        guard let descriptionView = descriptionViewController.view else { return }
-//
-//        self.addChild(descriptionViewController)
-//        self.view.addSubview(descriptionView)
-//        descriptionViewController.didMove(toParent: self)
-//
-//        descriptionView.translatesAutoresizingMaskIntoConstraints = false
-//
-//        NSLayoutConstraint.activate([
-//            descriptionView.topAnchor.constraint(equalTo: self.headerViewController.view.bottomAnchor),
-//            descriptionView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
-//            descriptionView.rightAnchor.constraint(equalTo: self.view.rightAnchor),
-//            descriptionView.heightAnchor.constraint(equalToConstant: 250.0)
-//        ])
-//    }
 }

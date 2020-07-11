@@ -14,6 +14,12 @@
 		9F6933E424A83806007DFDAF /* SearchModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6933E324A83806007DFDAF /* SearchModuleBuilder.swift */; };
 		9F6933E624A84330007DFDAF /* AppDetailVersionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6933E524A84330007DFDAF /* AppDetailVersionView.swift */; };
 		9F6933E824A84FD1007DFDAF /* AppDetailVersionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6933E724A84FD1007DFDAF /* AppDetailVersionViewController.swift */; };
+		9F8D004A24B9C1EF0071473D /* SongDetailControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D004924B9C1EF0071473D /* SongDetailControlViewController.swift */; };
+		9F8D004D24B9DC7F0071473D /* PlaySong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D004C24B9DC7F0071473D /* PlaySong.swift */; };
+		9F8D004F24B9DD6E0071473D /* FakePlaySongsSetvice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D004E24B9DD6E0071473D /* FakePlaySongsSetvice.swift */; };
+		9F8D005224B9DDA50071473D /* PlaySongsServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D005124B9DDA50071473D /* PlaySongsServiceInterface.swift */; };
+		9F8D005524B9ED200071473D /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D005424B9ED200071473D /* SongViewModel.swift */; };
+		9F8D005824B9F0700071473D /* SongDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D005724B9F0700071473D /* SongDetailModel.swift */; };
 		9FE0639824A8B8EB00437D99 /* SongSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE0639724A8B8EB00437D99 /* SongSearchViewController.swift */; };
 		9FE0639A24A8C39D00437D99 /* SongCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE0639924A8C39D00437D99 /* SongCellModel.swift */; };
 		9FE0639C24A8C54700437D99 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE0639B24A8C54700437D99 /* SongCell.swift */; };
@@ -21,6 +27,12 @@
 		9FE063A124AB640C00437D99 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE063A024AB640C00437D99 /* Observable.swift */; };
 		9FE063AC24B5E79500437D99 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE063AB24B5E79500437D99 /* SearchRouter.swift */; };
 		9FE063AE24B5E95C00437D99 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE063AD24B5E95C00437D99 /* SearchInteractor.swift */; };
+		9FE063B024B5FAD900437D99 /* SongSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE063AF24B5FAD900437D99 /* SongSearchRouter.swift */; };
+		9FE063B524B5FFDB00437D99 /* SongDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE063B424B5FFDB00437D99 /* SongDetailHeaderView.swift */; };
+		9FE063B724B605CE00437D99 /* SongDetailHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE063B624B605CE00437D99 /* SongDetailHeaderViewController.swift */; };
+		9FE063B924B6086C00437D99 /* SongDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE063B824B6086C00437D99 /* SongDetailViewController.swift */; };
+		9FE063BB24B73F9600437D99 /* SongSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE063BA24B73F9600437D99 /* SongSearchInteractor.swift */; };
+		9FE063BD24B7533500437D99 /* SongDetailControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE063BC24B7533500437D99 /* SongDetailControlView.swift */; };
 		E0E1D2932034A3350011E01A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E1D2922034A3350011E01A /* AppDelegate.swift */; };
 		E0E1D2952034A3350011E01A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E1D2942034A3350011E01A /* SearchViewController.swift */; };
 		E0E1D29A2034A3350011E01A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0E1D2992034A3350011E01A /* Assets.xcassets */; };
@@ -51,6 +63,12 @@
 		9F6933E324A83806007DFDAF /* SearchModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModuleBuilder.swift; sourceTree = "<group>"; };
 		9F6933E524A84330007DFDAF /* AppDetailVersionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailVersionView.swift; sourceTree = "<group>"; };
 		9F6933E724A84FD1007DFDAF /* AppDetailVersionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailVersionViewController.swift; sourceTree = "<group>"; };
+		9F8D004924B9C1EF0071473D /* SongDetailControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailControlViewController.swift; sourceTree = "<group>"; };
+		9F8D004C24B9DC7F0071473D /* PlaySong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySong.swift; sourceTree = "<group>"; };
+		9F8D004E24B9DD6E0071473D /* FakePlaySongsSetvice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakePlaySongsSetvice.swift; sourceTree = "<group>"; };
+		9F8D005124B9DDA50071473D /* PlaySongsServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySongsServiceInterface.swift; sourceTree = "<group>"; };
+		9F8D005424B9ED200071473D /* SongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
+		9F8D005724B9F0700071473D /* SongDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailModel.swift; sourceTree = "<group>"; };
 		9FE0639724A8B8EB00437D99 /* SongSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongSearchViewController.swift; sourceTree = "<group>"; };
 		9FE0639924A8C39D00437D99 /* SongCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCellModel.swift; sourceTree = "<group>"; };
 		9FE0639B24A8C54700437D99 /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
@@ -58,6 +76,12 @@
 		9FE063A024AB640C00437D99 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		9FE063AB24B5E79500437D99 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
 		9FE063AD24B5E95C00437D99 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		9FE063AF24B5FAD900437D99 /* SongSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongSearchRouter.swift; sourceTree = "<group>"; };
+		9FE063B424B5FFDB00437D99 /* SongDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailHeaderView.swift; sourceTree = "<group>"; };
+		9FE063B624B605CE00437D99 /* SongDetailHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailHeaderViewController.swift; sourceTree = "<group>"; };
+		9FE063B824B6086C00437D99 /* SongDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailViewController.swift; sourceTree = "<group>"; };
+		9FE063BA24B73F9600437D99 /* SongSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongSearchInteractor.swift; sourceTree = "<group>"; };
+		9FE063BC24B7533500437D99 /* SongDetailControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailControlView.swift; sourceTree = "<group>"; };
 		A067E149D296BC0C249FD11F /* Pods-iOSArchitecturesDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSArchitecturesDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSArchitecturesDemo/Pods-iOSArchitecturesDemo.release.xcconfig"; sourceTree = "<group>"; };
 		E0E1D28F2034A3350011E01A /* iOSArchitecturesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSArchitecturesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0E1D2922034A3350011E01A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +144,32 @@
 			path = Builder;
 			sourceTree = "<group>";
 		};
+		9F8D004B24B9DC520071473D /* PlaySong */ = {
+			isa = PBXGroup;
+			children = (
+				9F8D004C24B9DC7F0071473D /* PlaySong.swift */,
+				9F8D004E24B9DD6E0071473D /* FakePlaySongsSetvice.swift */,
+				9F8D005124B9DDA50071473D /* PlaySongsServiceInterface.swift */,
+			);
+			path = PlaySong;
+			sourceTree = "<group>";
+		};
+		9F8D005324B9ED0D0071473D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9F8D005424B9ED200071473D /* SongViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9F8D005624B9F0600071473D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9F8D005724B9F0700071473D /* SongDetailModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		9FE0639F24AB63F300437D99 /* Observable */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,8 +183,40 @@
 			children = (
 				9FE063AB24B5E79500437D99 /* SearchRouter.swift */,
 				9FE063AD24B5E95C00437D99 /* SearchInteractor.swift */,
+				9FE063AF24B5FAD900437D99 /* SongSearchRouter.swift */,
+				9FE063BA24B73F9600437D99 /* SongSearchInteractor.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		9FE063B124B5FECF00437D99 /* SongDetail */ = {
+			isa = PBXGroup;
+			children = (
+				9F8D005624B9F0600071473D /* Model */,
+				9F8D005324B9ED0D0071473D /* ViewModel */,
+				9FE063B224B5FEF900437D99 /* View */,
+				9FE063B324B5FF0200437D99 /* ViewController */,
+			);
+			path = SongDetail;
+			sourceTree = "<group>";
+		};
+		9FE063B224B5FEF900437D99 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9FE063B424B5FFDB00437D99 /* SongDetailHeaderView.swift */,
+				9FE063BC24B7533500437D99 /* SongDetailControlView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9FE063B324B5FF0200437D99 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9FE063B624B605CE00437D99 /* SongDetailHeaderViewController.swift */,
+				9FE063B824B6086C00437D99 /* SongDetailViewController.swift */,
+				9F8D004924B9C1EF0071473D /* SongDetailControlViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		DB95456C2F2DCD400ABCE8E9 /* Frameworks */ = {
@@ -179,6 +261,7 @@
 			children = (
 				E0E1D2A62034A36C0011E01A /* Search */,
 				E0E1D2A72034A3780011E01A /* AppDetail */,
+				9FE063B124B5FECF00437D99 /* SongDetail */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -327,6 +410,7 @@
 		F8A1E0402248511B00FE6448 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				9F8D004B24B9DC520071473D /* PlaySong */,
 				E0E1D385203AE3E00011E01A /* AppStartManager */,
 				E0E1D393203AE5AA0011E01A /* iTunesSearchService */,
 				E0E1D39D203AE7230011E01A /* ImageDownloader */,
@@ -469,22 +553,34 @@
 				9F6933E424A83806007DFDAF /* SearchModuleBuilder.swift in Sources */,
 				E0E1D399203AE62E0011E01A /* ITunesApp.swift in Sources */,
 				F8A97B352249898E00FB2C0E /* AppCell.swift in Sources */,
+				9FE063B524B5FFDB00437D99 /* SongDetailHeaderView.swift in Sources */,
+				9F8D004A24B9C1EF0071473D /* SongDetailControlViewController.swift in Sources */,
 				9F6933E124A82EE9007DFDAF /* SearchPresenter.swift in Sources */,
 				F8114FC522A3E77500102830 /* AppDetailView.swift in Sources */,
 				9FE0639824A8B8EB00437D99 /* SongSearchViewController.swift in Sources */,
 				E0E1D387203AE45F0011E01A /* WebRequest.swift in Sources */,
+				9F8D005824B9F0700071473D /* SongDetailModel.swift in Sources */,
 				F8A1E03C2248382F00FE6448 /* Monads.swift in Sources */,
 				9F6933DE24A787EB007DFDAF /* AppDetailHeaderViewController.swift in Sources */,
 				E0E1D3D4203C4AA50011E01A /* UIColor+Extensions.swift in Sources */,
+				9FE063BB24B73F9600437D99 /* SongSearchInteractor.swift in Sources */,
 				9F6933DC24A77EDE007DFDAF /* AppDetailHeaderView.swift in Sources */,
 				E0E1D3D1203C48D70011E01A /* AppDetailViewController.swift in Sources */,
 				E0E1D358203ADC590011E01A /* NetworkManager.swift in Sources */,
 				E0E1D39C203AE6420011E01A /* ITunesSong.swift in Sources */,
+				9FE063BD24B7533500437D99 /* SongDetailControlView.swift in Sources */,
+				9F8D004D24B9DC7F0071473D /* PlaySong.swift in Sources */,
 				9FE063AC24B5E79500437D99 /* SearchRouter.swift in Sources */,
+				9F8D005224B9DDA50071473D /* PlaySongsServiceInterface.swift in Sources */,
+				9FE063B924B6086C00437D99 /* SongDetailViewController.swift in Sources */,
 				9FE0639C24A8C54700437D99 /* SongCell.swift in Sources */,
+				9FE063B724B605CE00437D99 /* SongDetailHeaderViewController.swift in Sources */,
 				9F6933E824A84FD1007DFDAF /* AppDetailVersionViewController.swift in Sources */,
+				9F8D004F24B9DD6E0071473D /* FakePlaySongsSetvice.swift in Sources */,
 				9FE0639A24A8C39D00437D99 /* SongCellModel.swift in Sources */,
+				9FE063B024B5FAD900437D99 /* SongSearchRouter.swift in Sources */,
 				E0E1D2952034A3350011E01A /* SearchViewController.swift in Sources */,
+				9F8D005524B9ED200071473D /* SongViewModel.swift in Sources */,
 				E0E1D39F203AE7400011E01A /* ImageDownloader.swift in Sources */,
 				9FE0639E24AA275C00437D99 /* SongSearchPresenter.swift in Sources */,
 				F8114FBE22A3DBF400102830 /* SearchView.swift in Sources */,
@@ -631,6 +727,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/iOSArchitecturesDemo/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ekireev.iOSArchitecturesDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -646,6 +743,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/iOSArchitecturesDemo/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ekireev.iOSArchitecturesDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
