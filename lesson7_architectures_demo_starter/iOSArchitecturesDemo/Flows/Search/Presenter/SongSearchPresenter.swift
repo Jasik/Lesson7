@@ -19,12 +19,21 @@ protocol SongSearchViewInput: class {
 
 protocol SongSearchViewOutput: class {
     func viewDidSearch(with query: String)
+    func viewDidSelectSong(_ song: ITunesSong)
 }
 
 final class SongSearchPresenter {
     weak var viewInput: (UIViewController & SongSearchViewInput)?
     
     private let searchService = ITunesSearchService()
+    
+    let interactor: SongSearchInteractor
+    let router: SongSearchRouter
+    
+    init(interactor: SongSearchInteractor, router: SongSearchRouter){
+        self.interactor = interactor
+        self.router = router
+    }
 }
 
 private extension SongSearchPresenter {
@@ -55,5 +64,9 @@ extension SongSearchPresenter: SongSearchViewOutput {
     func viewDidSearch(with query: String) {
         self.viewInput?.throbber(show: true)
         self.requestSongs(with: query)
+    }
+    
+    func viewDidSelectSong(_ song: ITunesSong) {
+        self.router.openDetails(for: song)
     }
 }

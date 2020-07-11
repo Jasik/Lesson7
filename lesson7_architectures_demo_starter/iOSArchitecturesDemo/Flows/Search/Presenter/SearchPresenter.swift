@@ -61,11 +61,11 @@ private extension SearchPresenter {
         }
     }
     
-    func openAppDetails(with app: ITunesApp) {
-        let appDetailViewController = AppDetailViewController(app: app)
-        
-        self.viewInput?.navigationController?.pushViewController(appDetailViewController, animated: true)
-    }
+//    func openAppDetails(with app: ITunesApp) {
+//        let appDetailViewController = AppDetailViewController(app: app)
+//        
+//        self.viewInput?.navigationController?.pushViewController(appDetailViewController, animated: true)
+//    }
 }
 
 extension SearchPresenter: SearchViewOutput {

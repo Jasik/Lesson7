@@ -13,7 +13,7 @@ final class SearchViewController: UIViewController {
     // MARK: - Private Properties
     
     private var searchView: SearchView {
-        return self.view as! SearchView
+        self.view as! SearchView
     }
     private let presenter: SearchViewOutput
     private let searchService = ITunesSearchService()
@@ -48,6 +48,7 @@ final class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationController?.navigationBar.prefersLargeTitles = true
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "song", style: .plain, target: self, action: #selector(moveToSerchSong))
@@ -64,9 +65,12 @@ final class SearchViewController: UIViewController {
     }
     
     @objc private func moveToSerchSong() {
-        let presenter = SongSearchPresenter()
+        let router = SongSearchRouter()
+        let interactor = SongSearchInteractor()
+        let presenter = SongSearchPresenter(interactor: interactor, router: router)
         let songSearchViewController = SongSearchViewController(presenter: presenter)
         presenter.viewInput = songSearchViewController
+        router.viewController = songSearchViewController
         navigationController?.pushViewController(songSearchViewController, animated: true)
     }
 }
@@ -75,7 +79,7 @@ final class SearchViewController: UIViewController {
 extension SearchViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searchResults.count
+        searchResults.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -86,6 +90,7 @@ extension SearchViewController: UITableViewDataSource {
         let app = self.searchResults[indexPath.row]
         let cellModel = AppCellModelFactory.cellModel(from: app)
         cell.configure(with: cellModel)
+        
         return cell
     }
 }

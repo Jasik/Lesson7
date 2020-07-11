@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+protocol PlaySongsServiceInterface: class {
+    var playingSongs: [PlaySong] { get }
+    var onProgressUpdate: (() -> Void)? { get set }
+    func startPlaySong(_ song: ITunesSong)
+}

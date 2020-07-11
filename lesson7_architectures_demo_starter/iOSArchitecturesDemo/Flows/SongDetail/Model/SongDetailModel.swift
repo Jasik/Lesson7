@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+struct SongDetailModel {
+    let artistTitle: String
+    let trackTitle: String
+    let albumTitle: String
+    let songIcon: String
+    let playingProgress: Observable<PlaySong.PlayingState>
+}

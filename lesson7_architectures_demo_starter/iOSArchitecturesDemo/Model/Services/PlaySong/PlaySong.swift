@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+final class PlaySong {
+    enum PlayingState {
+        case notPlayed
+        case plaing(progress: Double)
+        case played
+    }
+    
+    let song: ITunesSong
+    var playingState: Observable<PlayingState> = Observable(.notPlayed)
+    
+    init(song: ITunesSong) {
+        self.song = song
+    }
+}

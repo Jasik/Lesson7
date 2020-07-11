@@ -6,4 +6,8 @@
 //  Copyright © 2020 ekireev. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+struct SongViewModel {
+    
+}
